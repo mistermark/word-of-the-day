@@ -15,16 +15,8 @@ module.exports.resetSettings = function(req, res) {
     res.json({"error": true, "message": "Settings can't be reset"});
   }
 
-  SettingsApi.remove({})
-    .then(function(response) {
-      // console.log(module.exports.initSettings);
-    })
-    .then(function(response) {
-      res.json(response);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
+  return SettingsApi.remove({});
+
 }
 
 module.exports.initSettings = function(req, res) {

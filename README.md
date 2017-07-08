@@ -1,5 +1,6 @@
-# word-of-the-day
-Small Node app to display a "word of the day" with a submit form to add words
+# Word of the Day API
+
+Small Node app to display a "Word of the Day" with a submit form to add words with a defined language.
 
 ## Requirements
 

@@ -24,7 +24,24 @@ mongoose.connection.on('error', function(err) {
 module.exports = function(app) {
 
   // Initialize a sample database
-  app.post('/api/reset', utils.resetApp);
+  app.post('/api/reset', function(req, res) {
+    settings.resetSettings(req, res)
+      .then(function() {
+        return words.resetWords(req, res);
+      })
+      .then(function() {
+        return words.sampleWordsDb(req, res);
+      })
+      .then(function() {
+        return settings.initSettings(req, res);
+      })
+      .then(function(response) {
+        res.json(response);
+      })
+      .catch(function(error) {
+        res.json(error);
+      });
+  });
 
   // Reset app settings
   app.post('/api/settings/reset', settings.resetSettings);

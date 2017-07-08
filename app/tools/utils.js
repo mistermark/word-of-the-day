@@ -65,25 +65,6 @@ exports.updateRound = function(req, res) {
     //     })
 }
 
-exports.resetApp = function(req, res) {
-  settings.resetSettings(req, res)
-    .then(function() {
-      return words.resetWords(req, res);
-    })
-    .then(function() {
-      return words.sampleWordsDb(req, res);
-    })
-    .then(function() {
-      return settings.initSettings(req, res);
-    })
-    .then(function(response) {
-      res.json(response);
-    })
-    .catch(function(error) {
-      res.json(error);
-    });
-}
-
 // exports.resetSettings = function(req, res) {
 //   settings.resetSettings(req, res)
 //     .then(function() {
