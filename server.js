@@ -30,7 +30,7 @@ require('./app/routes/routes')(app); // configure our routes
 
 
 // start app ===============================================
-app.listen(server.port);
+app.listen(process.env.PORT || server.port);
 
 // shoutout to the user
 console.log('Magic happens on port ' + server.port);
