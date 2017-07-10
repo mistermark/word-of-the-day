@@ -7,7 +7,7 @@ var hbs             = require('hbs');
 // var util            = require('util');
 
 //=== configuration ===
-var db              = require('./config/db');
+// var db              = require('./config/db');
 var server          = require('./config/server');
 
 // app.use(express.logger('dev')); /* 'default', 'short', 'tiny', 'dev' */

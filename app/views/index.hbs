@@ -9,7 +9,7 @@
   </head>
   <body ng-app="wordsApp">
 
-    <div class="container" ng-controller="wordsAppController as vm">
+    <div class="container">
 
       <div class="row">
         <div class="col-md-12">
@@ -21,81 +21,11 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6">
-
-          <div ng-repeat="word in vm.allWords track by $index">
-            <h4>[[ word.word ]] <small class="text-muted">[ [[ word.pronunciation ]] ]</small></h4>
-            <small>[[ word._id ]]</small>
-            <p>[[ word.definition ]]</p>
-            <div ng-if="word.meta.language">
-              <span class="tag tag-default">[[ word.meta.language ]]</span>
-              <span class="tag tag-default">[[ word.meta.created | date:'yyyy-M-d, H:m' ]]</span>
-              <span class="tag tag-default">[[ word.meta.featured ]]</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-6">
-
-          <div class="alert alert-success" ng-show="vm.submitSuccess.status == 'success'" ng-class="vm.alertClass">
-            [[ vm.submitSuccess.message ]]
-          </div>
-          <div class="alert alert-danger" ng-show="vm.submitSuccess.status == 'error'" ng-class="vm.alertClass">
-            [[ vm.submitSuccess.message ]]
-          </div>
-
-          <form ng-submit="vm.sendWord()">
-            <div class="form-group row">
-              <label for="word" class="col-md-3 col-form-label">Word</label>
-              <div class="col-md-9">
-                <input ng-model="vm.wordForm.word" type="text" name="word" id="word" value="" placeholder="Enter your word" class="form-control"/>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="pronunciation" class="col-md-3 col-form-label">Pronunciation</label>
-              <div class="col-md-9">
-                <input ng-model="vm.wordForm.pronunciation" type="text" name="pronunciation" id="pronunciation" value="" placeholder="How do you pronounce the word?" class="form-control"/>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="definition" class="col-md-3 col-form-label">Definition</label>
-              <div class="col-md-9">
-                <textarea ng-model="vm.wordForm.definition" name="definition" id="definition" rows="8" cols="40" placeholder="What does the word mean?" class="form-control"></textarea>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="language" class="col-md-3 col-form-label">Language</label>
-              <div class="col-md-9">
-                <select class="custom-select" name="language" id="language"
-                  ng-model="vm.wordForm.meta.language" ng-options="a as b for (a,b) in vm.languages">
-                  <option value="" disabled="disabled">-- Select a language --</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="author" class="col-md-3 col-form-label">Author</label>
-              <div class="col-md-9">
-                <input ng-model="vm.wordForm.meta.author" type="text" name="author" value="" placeholder="What's your name?" class="form-control"/>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-6 offset-md-6 text-md-right">
-                <a href="#" class="btn btn-link" ng-click="vm.clearForm($event)">Clear</a>
-                <button type="submit" class="btn btn-primary" name="button">Submit</button>
-              </div>
-            </div>
-          </form>
-
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <!-- <h2>Complete List of Words</h2> -->
-
+        <div class="col-md-6 col-md-offset-6">
+          <p>An actual running app coming soon!</p>
         </div>
       </div>
+
     </div>
 
     {{> foot }}
