@@ -92,6 +92,7 @@ app.service('localeList', function() {
       "ar_EG": "Arabic",
       "es_ES": "Spanish",
       "sr_CS": "Serbian",
+      "it_IT": "Italian",
   }
 });
 
