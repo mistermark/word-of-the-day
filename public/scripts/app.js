@@ -89,7 +89,9 @@ app.service('localeList', function() {
       "zh_CH": "Chinese",
       "nl_NL": "Dutch",
       "ko_KR": "Korean",
-      "sr_CS": "Serbian"
+      "ar_EG": "Arabic",
+      "es_ES": "Spanish",
+      "sr_CS": "Serbian",
   }
 });
 

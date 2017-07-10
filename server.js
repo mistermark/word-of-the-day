@@ -18,6 +18,15 @@ app.use(bodyParser.json());
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(function(req, res, next) {
+    var reqOrigin = req.headers.origin;
+    if(server.XOallowedDomains.indexOf(reqOrigin) > -1){
+        res.setHeader('Access-Control-Allow-Origin', reqOrigin);
+    }
+    // res.setHeader('Access-Control-Allow-Origin', 'localhost');
+    next();
+})
+
 hbs.registerPartials(path.join(__dirname, '/app/views/partials'));
 
 // set the static files location /public/img will be /img for users

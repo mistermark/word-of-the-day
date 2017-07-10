@@ -21,8 +21,6 @@ exports.getFeaturedWord = function(req, res) {
 
   WordApi.find(featureQuery)
     .then(function(response) {
-      // var l = response.length;
-      // featuredWord = response[Math.floor(Math.random() * l)];
       var random = Math.floor(Math.random() * response.length);
       console.log(random);
       res.json(response[random]);

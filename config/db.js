@@ -3,6 +3,6 @@
 module.exports = {
     url: {
         dev: 'mongodb://localhost:27017/wotd',
-        prod: '' 
+        prod: 'mongodb://localhost:27017/wotd' 
     }
 }

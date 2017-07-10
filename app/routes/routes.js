@@ -6,14 +6,14 @@ var router          = express.Router();
 var db              = require('../../config/db');
 
 var words           = require('./words');
-var featured         = require('./featured');
+var featured        = require('./featured');
 var settings        = require('./settings');
 
 var siteConfig      = require('../../config/site');
 var utils           = require('../tools/utils');
 
 // Mongo database
-mongoose.Promise = global.Promise;
+// mongoose.Promise = global.Promise;
 mongoose.connect(db.url.dev);
 
 mongoose.connection.on('error', function(err) {
