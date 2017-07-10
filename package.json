@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Show a word of the day from a local database",
   "main": "server.js",
+  "engines": {
+    "node": "6.9.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
