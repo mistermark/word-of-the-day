@@ -4,13 +4,8 @@ var bodyParser      = require('body-parser');
 var path            = require('path');
 var hbs             = require('hbs');
 
-// var util            = require('util');
-
 //=== configuration ===
-// var db              = require('./config/db');
 var server          = require('./config/server');
-
-// app.use(express.logger('dev')); /* 'default', 'short', 'tiny', 'dev' */
 
 // parse application/json
 app.use(bodyParser.json());
@@ -33,4 +28,4 @@ require('./app/routes/routes')(app); // configure our routes
 app.listen(process.env.PORT || server.port);
 
 // shoutout to the user
-console.log('Magic happens on port ' + server.port);
+console.log('Magic happens on port ' + process.env.PORT || server.port);
