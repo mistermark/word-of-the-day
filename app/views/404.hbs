@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.notfound.title }} - {{ site.title }}</title>
+
+    {{> head }}
+
+  </head>
+  <body ng-app="wordsApp">
+
+    <div class="container" ng-controller="wordsAppController as vm">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-3">{{ site.page.title }}</h1>
+            <p class="lead">{{ site.page.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <p>{{ site.notfound.message }}</p>
+          <p>{{ site.notfound.urlLabel }} <code>{{ url }}</code></p>
+
+        </div>
+      </div>
+    </div>
+
+    {{> foot }}
+
+  </body>
+</html>

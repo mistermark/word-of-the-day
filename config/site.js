@@ -5,6 +5,11 @@ module.exports = {
   },
   "page": {
     "title": "Word of the Day",
-    "description": "Use this form to submit new words to the pool."
+    "description": "Displaying a random Word of the Day in a random language"
+  },
+  "notfound": {
+    "title": "Page not found",
+    "message": "This isn't the page you're looking for.",
+    "urlLabel": "You've entered:"
   }
 }
