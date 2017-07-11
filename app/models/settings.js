@@ -2,8 +2,6 @@
 var mongoose        = require('mongoose');
 var utils           = require('../tools/utils');
 
-console.log(utils);
-
 var settingsSchema = new mongoose.Schema({
     round: {
       type: Number,
