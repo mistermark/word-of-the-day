@@ -1,6 +1,6 @@
 // load all the things we need
 var GoogleStrategy      = require('passport-google-oauth').OAuth2Strategy;
-var configAuth          = require('./auth');
+var configLocal         = require('./local');
 
 // load up the user model
 var User                = require('../app/models/user');
@@ -22,16 +22,16 @@ module.exports = function(passport) {
     });
     
     passport.use(new GoogleStrategy({
-        clientID: configAuth.googleAuth.clientID,
-        clientSecret: configAuth.googleAuth.clientSecret,
-        callbackURL: configAuth.googleAuth.callbackUrl,
+        clientID: configLocal.auth.google.clientID,
+        clientSecret: configLocal.auth.google.clientSecret,
+        callbackURL: configLocal.auth.google.callbackUrl,
     },
         function (token, refreshToken, profile, done) {
             // make the code asynchronous
             // User.findOne won't fire until we have all our data back from Google
             process.nextTick(function() {
 
-                if (profile._json.domain !== configAuth.googleAuth.allowedDomain) {
+                if (profile._json.domain !== configLocal.auth.google.allowedDomain) {
                     done(new Error("Wrong domain!"));
                 } else {
                     // try to find the user based on their google id
