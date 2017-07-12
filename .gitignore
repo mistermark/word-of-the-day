@@ -39,7 +39,3 @@ jspm_packages
 # api
 .env
 /curl
-/config/local.js
-/config/auth.js
-/config/db.js
-/config/server.js
