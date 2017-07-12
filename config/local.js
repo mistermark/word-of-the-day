@@ -23,10 +23,10 @@ module.exports = {
     },
     'server': {
         'port': '8080',
-        'XOallowedDomains': process.env['server.XOallowedDomains'].split(','),
+        'XOallowedDomains': process.env['server_XOallowedDomains'].split(','),
     },
     'session': {
-        'secret': process.env['session.secret'],
+        'secret': process.env['session_secret'],
         'cookieAge': 604800000,
         'rolling': true,
         'resave': true, 
@@ -34,10 +34,10 @@ module.exports = {
     },
     'auth': {
         'google': {
-            'clientID': process.env['auth.google.clientID'],
-            'clientSecret': process.env['auth.google.clientSecret'],
-            'callbackUrl': process.env['auth.google.callbackUrl'],
-            'allowedDomain': process.env['auth.google.allowedDomain'],
+            'clientID': process.env['auth_google_clientID'],
+            'clientSecret': process.env['auth_google_clientSecret'],
+            'callbackUrl': process.env['auth_google_callbackUrl'],
+            'allowedDomain': process.env['auth_google_allowedDomain'],
         }
     },
     'db': {
