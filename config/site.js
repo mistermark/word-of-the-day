@@ -1,15 +1,16 @@
+var configLocal         = require('./local');
 
 module.exports = {
   "site": {
-    "title": "Word of the Day App"
+    "title": configLocal.view.site.title,
   },
   "page": {
-    "title": "Word of the Day",
-    "description": "Displaying a random Word of the Day in a random language"
+    "title": configLocal.view.pages.index.title,
+    "description": configLocal.view.pages.index.description,
   },
   "notfound": {
-    "title": "Page not found",
-    "message": "This isn't the page you're looking for.",
-    "urlLabel": "You've entered:"
+    "title": configLocal.view.pages.notfound.title,
+    "message": configLocal.view.pages.notfound.message,
+    "urlLabel": configLocal.view.pages.notfound.urlLabel,
   }
 }
