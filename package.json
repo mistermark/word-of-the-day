@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nf start"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
+    "foreman": "2.0.0",
     "hbs": "^4.0.1",
     "method-override": "^2.3.9",
     "mongoose": "^4.11.1",
