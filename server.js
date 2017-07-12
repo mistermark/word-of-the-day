@@ -12,6 +12,7 @@ var cookieParser    = require('cookie-parser');
 // var util            = require('util');
 
 //=== configuration ===
+var db              = require('./config/db');
 var server          = require('./config/server');
 var configSession   = require('./config/session');
 

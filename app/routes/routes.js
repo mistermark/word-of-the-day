@@ -1,12 +1,4 @@
 //== includes
-<<<<<<< HEAD
-var express         = require('express');
-var router          = express.Router();
-
-var words           = require('./words');
-
-var siteConfig      = require('../../config/site');
-=======
 var mongoose        = require('mongoose');
 
 var db              = require('../../config/db');
@@ -27,7 +19,6 @@ mongoose.connection.on('error', function(err) {
   console.log(err.name +': '+ err.message);
 });
 
->>>>>>> develop
 
 module.exports = function(app, passport) {
 
@@ -38,11 +29,6 @@ module.exports = function(app, passport) {
     next();
   });
 
-<<<<<<< HEAD
-  app.get('/', function(req, res) {
-    res.render('index', siteConfig);
-  })
-=======
   // Initialize a sample database
   app.post('/api/reset', function(req, res) {
     settings.resetSettings(req, res)
@@ -93,7 +79,6 @@ module.exports = function(app, passport) {
   // Add single word
   app.post('/api/words', words.addWord);
 
->>>>>>> develop
 
   // Authentication
   app.get('/auth/google', 
@@ -146,10 +131,7 @@ module.exports = function(app, passport) {
       return;
     }
 
-<<<<<<< HEAD
-=======
     res.type('txt').send(site.notfound.message);
   });
 
->>>>>>> develop
 }
