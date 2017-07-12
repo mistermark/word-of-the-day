@@ -38,6 +38,7 @@ jspm_packages
 
 # api
 .env
+/config/local.js
 /config/auth.js
 /config/db.js
 /config/server.js
