@@ -58,7 +58,6 @@ app.use(passport.session()); // persistent login sessions
 //=== routes ===
 require('./app/routes/routes')(app, passport); // configure our routes
 
-
 // start app ===============================================
 app.listen(process.env.PORT || server.port);
 
