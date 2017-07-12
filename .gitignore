@@ -37,6 +37,7 @@ jspm_packages
 .node_repl_history
 
 # api
+.env
 /config/auth.js
 /config/db.js
 /config/server.js
