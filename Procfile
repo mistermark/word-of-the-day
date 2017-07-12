@@ -1,1 +1,1 @@
-web: nf start
+web: npm start
