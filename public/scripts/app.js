@@ -93,16 +93,6 @@ app.service('localeList', function() {
       "es_ES": "Spanish",
       "sr_CS": "Serbian",
       "it_IT": "Italian",
+      "pt_PT": "Portuguese",
   }
 });
-
-// app.directive('languageOptions', ['$http', 'wordsConfig', function($http, config) {
-//   return {
-//     getAll: function() {
-//       return $http.get(config.api.words);
-//     },
-//     addNew: function(model) {
-//       return $http.post(config.api.words, model, {"Content-Type": "application/json"});
-//     }
-//   }
-// }]);
