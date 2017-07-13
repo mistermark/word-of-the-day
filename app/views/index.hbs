@@ -32,6 +32,7 @@
             <small>[[ word._id ]]</small>
             <p>[[ word.definition ]]</p>
             <div ng-if="word.meta.language">
+              <span class="tag tag-default">[[ word.meta.author ]]</span>
               <span class="tag tag-default">[[ word.meta.language ]]</span>
               <span class="tag tag-default">[[ word.meta.created | date:'yyyy-M-d, H:m' ]]</span>
               <span class="tag tag-default">[[ word.meta.featured ]]</span>
