@@ -38,4 +38,4 @@ jspm_packages
 
 # api
 .env
-/curl
+*.sh
