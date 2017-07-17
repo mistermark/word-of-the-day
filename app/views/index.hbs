@@ -25,11 +25,10 @@
       <div class="row">
         <div class="col-md-6">
 
-          <h2>Full list of Words</h2>
+          <h2>Recent 10 Words</h2>
 
           <div ng-repeat="word in vm.allWords track by $index">
             <h4>[[ word.word ]] <small class="text-muted">[ [[ word.pronunciation ]] ]</small></h4>
-            <small>[[ word._id ]]</small>
             <p>[[ word.definition ]]</p>
             <div ng-if="word.meta.language">
               <span class="tag tag-default">[[ word.meta.author ]]</span>

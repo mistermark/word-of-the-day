@@ -36,13 +36,14 @@ exports.getWords = function(req, res) {
   console.log('Retrieving full list of words');
 
   WordApi.find({})
-    .sort({ "meta.date": -1 })
+    .limit(parseInt(req.query.limit))
+    .sort({ 'meta.created': -1 })
     .then(function(response, err) {
       if(err) response = {"status": "success", "message": "Error fetching data"};
 
       if(response.length === 0)
         response = {"status": "success", "message": "Nothing to fetch"};
-
+      
       res.json(response);
     })
     .catch(function(err) {
