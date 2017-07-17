@@ -10,6 +10,7 @@ app.constant('wordsConfig', {
   'api': {
     'url': 'localhost',
     'words': '/api/words',
+    'word': '/api/word',
     'port': '8080'
   },
   'settings': {
@@ -36,8 +37,12 @@ app.controller('wordsAppController', ['$filter', '$timeout', 'wordsConfig', 'wor
   };
 
   api.getAll().then(function(res) {
-      vm.allWords = res.data;
-    });
+    vm.allWords = res.data;
+  });
+
+  api.getSingle().then(function(res){
+    vm.singleWord = res.data;
+  });
 
   vm.languages = locales;
 
@@ -72,10 +77,13 @@ app.controller('wordsAppController', ['$filter', '$timeout', 'wordsConfig', 'wor
 app.service('wordApi', ['$http', 'wordsConfig', function($http, config) {
   return {
     getAll: function() {
-      return $http.get(config.api.words);
+      return $http({
+        method: 'GET',
+        url: config.api.words +'?limit=4'
+      });
     },
-    getSingle: function(word) {
-      return $http.get(config.api.words + '/' + word);
+    getSingle: function() {
+      return $http.get(config.api.word);
     },
     addNew: function(model) {
       return $http.post(config.api.words, model, {"Content-Type": "application/json"});
